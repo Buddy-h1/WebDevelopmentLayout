@@ -1,0 +1,451 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+/*ШАБЛОНЫ И СТРУКТУРНЫЕ БЛОКИ*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: black;
+}
+.container {
+	width: 1170px;
+	margin: auto;
+}
+.btn_template {
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: white;
+	width: 220px;
+	height: 70px;
+	border: 3px solid #fff;
+	text-align: center;
+	margin-right: 25px;
+	transition: 0.1s;
+}
+.btn_template p {
+	position: relative;
+	top: 30%;
+}
+.btn_template:hover {
+	color:  #00897b;
+	border: 3px solid #00897b;
+}
+.btn_2_template {
+	display: block;
+	background-color: #00897b;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: white;
+	width: 220px;
+	height: 70px;
+	text-align: center;
+	padding-top: 20px;
+	transition: 0.1s;
+}
+.btn_2_template:hover {
+	color:  #00897b;
+	background-color: white;
+}
+.title_template {
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+.title_template h2 {
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 30px;
+}
+.title_template p {
+	width: 630px;
+	margin: auto;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+}
+
+/*БЛОК НАВИГАЦИИ*/
+.nav_block {
+	display: flex;
+	justify-content: flex-end;
+	height: 120px;
+	background-color: white;
+	align-items: center;
+	position: relative;
+}
+.logo {
+	padding-right: 300px;
+}
+.nav a {
+	font-weight: 600;
+	color: #212121;
+	padding-right: 42px;
+}
+/*-->ПОИСК*/
+.search {
+	position:absolute;
+	width: 20px;
+	height: 42px;
+}
+input {
+	height: 42px;
+	width: 0;
+	padding: 0 42px 0 0px;
+	border: none;
+	border-bottom: 2px solid transparent;
+	outline: none;
+	background: transparent;
+	transition: .2s cubic-bezier(0, 0.8, 0, 1);
+	position: absolute;
+	top: 0px;
+	right: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+input:focus {
+	width: 220px;
+	background: white;
+	border-bottom: 2px solid #000000;
+}
+button {
+	background: transparent;
+	border: none;
+	height: 42px;
+	width: 42px;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	cursor: pointer;
+	padding-left: 20px;
+}
+button:before {
+	content: "\f002";
+	font-family: FontAwesome;
+	font-size: 16px;
+	color: black;
+}
+
+/*БЛОК - ФОН*/
+.background {
+	background-image: url(../img/header_background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: auto;
+	height: 50em;
+	margin-bottom: 100px;
+}
+.main_title h1 {
+	padding-top: 180px;
+	font-weight: 600;
+	font-size: 60px;
+	letter-spacing: 0.1em;
+	color: white;
+	text-align: center;
+}
+.main_title p {
+	padding-top: 38px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding-bottom: 100px;
+	letter-spacing: 2px;
+}
+.header_buttons {
+	display: flex;
+	justify-content: center;
+}
+.fast_passage {
+	display: block;
+	width: 25px;
+	margin: auto;
+	margin-top: 100px;
+}
+.fast_passage:before {
+	content: "\f078";
+	font-family: FontAwesome;
+	color: white;
+	font-size: 25px;
+}
+
+/*БЛОК - ABOUT US*/
+.features {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 110px;
+	margin-bottom: 127px;
+}
+.features div {
+	width: 270px;
+	height: 215px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70px 70px;
+}
+.features h3{
+	font-weight: 600;
+	font-size: 20px;
+	padding-bottom: 25px;
+	padding-top: 30px;
+}
+.features p{
+	font-weight: 400;
+	font-size: 15px;
+}
+
+/*БЛОК - OUR SEVICES*/
+.our_services {
+	padding-top: 174px;
+	background-color: #e4fdf9;
+}
+.grid_services {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 438px 438px 438px;
+	grid-gap: 30px;
+	margin-top: 110px;
+	padding-bottom: 121px;
+	margin-bottom: 127px;
+}
+.grid_services div {
+	background-image: url(../img/our_services_icon_black.png);
+	background-repeat: no-repeat;
+	background-color: white;
+	background-position-x: 50%;
+	background-position-y: 15%;
+	padding-top: 120px;
+	text-align: center;
+	transition: 0.2s ease-in-out;
+}
+.grid_services h3 {
+	font-weight: 600;
+	font-size: 20px;
+	padding-bottom: 25px;
+	padding-top: 30px;
+	letter-spacing: 1px;
+	transition: 0.5s;
+}
+.grid_services p {
+	width: 290px;
+	margin: auto;
+	font-weight: 600;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	transition: 0.1s;
+}
+.grid_services a p {
+	width: 100%;
+}
+.grid_services a {
+	display: block;
+	width: 150px;
+	height: 50px;
+	margin: 50px 110px;
+	color: black;
+	border: 2px solid #000;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	transition: 0.5s;
+}
+.grid_services div:hover {
+	box-shadow: 0 0 10px #728683;
+	background-image: url(../img/our_services_icon_white.png);
+	background-color: #00897b;
+	transform: scale(1.05);
+}
+.grid_services div:hover h3{ 
+	color: #fff;
+}
+.grid_services div:hover p{
+	color: #fff;
+}
+.grid_services div:hover a {
+	color: #fff;
+	border: 2px solid #fff;
+}
+
+/*БЛОК - LATEST WORKS*/
+.buttons_latest_works {
+	margin-top: 110px;
+	margin-bottom: 120px;
+	display: flex;
+	justify-content: center;
+}
+.buttons_latest_works a {
+	width: 180px;
+	height: 55px;
+	border: 2px solid #00897b;
+	color: #000;
+	font-size: 18px;
+	font-weight: 500;
+	margin-right: 20px;
+}
+.buttons_latest_works a:hover {
+	background-color: #00897b;
+	color: white;
+}
+.buttons_latest_works a:focus {
+	background-color: #00897b;
+	color: black;
+}
+.grid_latest_works {
+	display: grid;
+	grid-template-columns: 370px 370px 370px;
+	grid-template-rows: 370px 370px;
+	grid-gap: 30px;
+	margin-top: 110px;
+	padding-bottom: 121px;
+}
+.background_latest_works {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.grid_latest_works div {
+	text-align: center;
+	font-weight: 500;
+	font-size: 20px;
+	color: white;
+	padding-top: 100px;
+	transition: 0.2s;
+	position: relative;
+}
+.grid_latest_works div:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+	
+}
+.grid_latest_works h2{
+	opacity: 0;
+}
+.grid_latest_works div:hover h2 {
+	opacity: 1;
+}
+.grid_latest_works p{
+	opacity: 0;
+	font-size: 15px;
+}
+.grid_latest_works div:hover p {
+	opacity: 1;
+}
+.viewall a {
+	color: black;
+	border: 3px solid #000;
+}
+.viewall a:hover {
+background-color: #00897b;
+color: white;
+}
+.viewall {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 136px;
+}
+
+/*БЛОК - PRICING PLAN*/
+.pricing_plan {
+	padding-top: 126px;
+	background-color: #f0f1f1;
+}
+.trails {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 120px;
+	padding-bottom: 120px;
+}
+.trail {
+	width: 370px;
+	height: 670px;
+	margin-right: 30px;
+	background-color: white;
+	transition: 0.3s ease-in-out;
+}
+.trail:hover {
+	box-shadow: 0 0 20px rgb(63, 63, 63);
+	transform: scale(1.05);
+	background-color: #f5f5f5;
+}
+.trail a {
+	border: 3px solid #000;
+	color: black;
+	margin: auto;
+	margin-top: 65px;
+	font-weight: 500;
+}
+.trail a:hover {
+	background-color: #00897b;
+	color: white;
+}
+.background_trails {
+	background-image: url(../img/pricing_plan_background.png);
+	width: 360px;
+	height: 210px;
+	background-repeat: no-repeat;
+	position: absolute;
+	margin-right: 0px;
+	text-align: center;
+	color: white;
+}
+.trail h3 {
+	font-size: 25px;
+	margin: auto;
+	padding-top: 48px;
+	padding-bottom: 38px;
+}
+.price_flex {
+	display: flex;
+	justify-content: center;
+}
+.currency {
+	display: block;
+	padding-right: 5px;
+	align-self: flex-start;
+}
+.numbers {
+	display: block;
+	padding-right: 5px;
+	font-size: 50px;
+	line-height: 50px;
+}
+.time {
+	display: block;
+	align-self: flex-end;
+	padding-bottom: 2px;
+}
+.description_trail {
+	padding-left: 25%;
+	padding-right: 25%;
+	padding-top: 220px;
+	text-align: center;
+}
+.description_trail p {
+	font-weight: 300;
+	font-size: 17px;
+	color: black;
+	display: block;
+	width: 175px;
+	height: 63px;
+	border-bottom: 1px solid #bfbfbf;
+}
